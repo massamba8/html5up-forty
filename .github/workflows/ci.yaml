@@ -59,7 +59,7 @@ jobs:
           docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.29.0
+        uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: '${{ env.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}'
           format: 'table'
@@ -98,4 +98,5 @@ jobs:
             -p 80:80 \
             --name ci-app \
             $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+
             
