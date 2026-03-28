@@ -73,7 +73,7 @@ jobs:
   # ===============================
   deploy:
     needs: scan-trivy
-    runs-on: aws-runner
+    runs-on: ubuntu-latest
 
     steps:
       - name: Pull latest image
@@ -99,4 +99,3 @@ jobs:
             --name ci-app \
             $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
 
-            
