@@ -16,3 +16,4 @@ EXPOSE 80
 
 # Run command when container starts up
 CMD ["nginx", "-g", "daemon off;"]
+RUN apk update && apk upgrade
