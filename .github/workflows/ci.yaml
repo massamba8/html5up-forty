@@ -89,3 +89,4 @@ jobs:
             --name ci-app \
             $DOCKER_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
             
+            
